@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_class %}bg{% endblock body_class %}
+{% block title %}Lista Postulaciones{% endblock title %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12 text-center ">
+            <p class="h1">Lista Postulantes</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">RUT</th>
+                    <th scope="col">Comuna</th>
+                    <th scope="col">Ver Detalle</th>
+                    <th scope="col">Modificar</th>
+                    <th scope="col">Elminar</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for postulante in object_list %}
+                    {% if postulante.vigente %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{ postulante.nombres }}</td>
+                            <td>{{ postulante.apellidos }}</td>
+                            <td>{{ postulante.rut }}</td>
+                            <td>{{ postulante.comuna }}</td>
+                            <td>
+                                <a class="btn btn-outline-success" role="button"
+                                   href="{% url 'postulacion:detalle_postulacion' postulante.pk %}">Ver Detalle</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-warning" role="button"
+                                   href="{% url 'postulacion:modificar_postulacion' postulante.pk %}">Modificar</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" role="button"
+                                   href="{% url 'postulacion:eliminar_postulacion' postulante.pk %}">Eliminar</a>
+
+
+
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock content %}
+
+ts %}

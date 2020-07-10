@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body_class %}bg{% endblock body_class %}
+{% block content %}
+
+    <div class="text-center mt-5 bg-color-lightgray rounded-lg">
+
+    <form method="post">{% csrf_token %}
+        <p>Seguro desea Eliminar?: "{{ object }}"?</p>
+        <input class="mb-2" type="submit" value="Confirm">
+    </form>
+</div>
+{% endblock content %}

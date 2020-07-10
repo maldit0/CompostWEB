@@ -1,0 +1,48 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block meta_tags %}{% endblock %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/compostweb.css' %}"
+          crossorigin="anonymous">
+
+    {% block style %}{% endblock style %}
+
+
+    <title>{% block title %} Hello, world!{% endblock title %}</title>
+</head>
+<body class="{% block body_class %}{% endblock body_class %}">
+<div class="container-sm">
+
+    {% if True %}
+        {% include '_navbar.html' %}
+    {% endif %}
+    {% block content %}
+        <p class="h1"> Hello_Word</p>
+    {% endblock content %}
+
+</div>
+<!-- Optional JavaScript -->
+<!-- Popper.js first, then Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+
+{% block scripts %} {% endblock scripts %}
+
+
+</body>
+
+</html>

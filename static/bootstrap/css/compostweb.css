@@ -1,0 +1,49 @@
+.module_size {
+    max-width: 50%;
+    min-width: 40%;
+}
+
+
+.home_size {
+    height: 200px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+.form-signin {
+    height: 300px;
+    width: 500px;
+    margin-top: 10%;
+}
+
+.contenedor {
+    width: fit-content;
+    height: fit-content;
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+.border {
+    border-width: 3px !important;
+}
+
+.bg-color-lightgray {
+    background-color: lightgray;
+}
+
+.bg-color-lightgray-op {
+    opacity: 0.7;
+    background-color: lightgray;
+}
+
+
+
+.bg {
+    /* The image used */
+   background-image: url(https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_960_720.jpg);
+   background-size:cover;
+}

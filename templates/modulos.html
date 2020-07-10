@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Modulos{% endblock title %}
+{% block body_class %}bg{% endblock body_class %}
+{% block content %}
+    <a class="btn btn-outline-light my-2" role="button"
+       href="{% url 'logout' %}">Logout {{ request.user }}</a>
+
+    <div class="row module_size rounded rounded-lg border border-dark text-center mx-auto bg-color-lightgray-op">
+
+        <div class="mx-auto">
+            <p class="h3">Modulos CompostWEB</p>
+        </div>
+        <div class="mx-auto">
+            <a class="btn btn-outline-dark my-2" role="button"
+               href="{% url 'postulacion:lista_postulacion' %}">Listado Postulaciones</a>
+        </div>
+        <div class="mx-auto">
+            <a class="btn btn-outline-dark mt-4 mb-2" role="button"
+               href="">Placeholder</a>
+        </div>
+        <div class="mx-auto">
+            <a class="btn btn-outline-dark mt-4 mb-2" role="button"
+               href="">Placeholder</a>
+        </div>
+        <div class="mx-auto">
+            <a class="btn btn-outline-dark mt-4 mb-2" role="button"
+               href="">Placeholder</a>
+        </div>
+    </div>
+
+{% endblock content %}

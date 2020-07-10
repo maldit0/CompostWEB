@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <div class="row text-center home_size rounded-lg border border-dark">
+
+        <div class="col-sm-12 pt-5">
+            <a class="btn btn-outline-dark" href="{% url 'postulacion:postulacion' %}" role="button">Postular</a>
+        </div>
+        <div class="col-sm-12 pb-5">
+            <a class="btn btn-outline-dark" href="{% url 'login' %}" role="button">Login</a>
+        </div>
+    </div>
+{% endblock content %}

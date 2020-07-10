@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body_class %}bg{% endblock body_class %}
+
+{% block content %}
+
+    <p class="h1 mt-4 text-center">Detalle Postulante</p>
+
+   <ul class="list-group mt-4">
+        <li class="list-group-item">ID: {{ object.id }}</li>
+        <li class="list-group-item">Nombres: {{ object.nombres }} {{ object.apellidos }}</li>
+        <li class="list-group-item">RUT: {{ object.rut }}</li>
+        <li class="list-group-item">Email: {{ object.email }}</li>
+        <li class="list-group-item">Teléfono: {{ object.telefono }}</li>
+        <li class="list-group-item">Comuna: {{ object.comuna }}</li>
+        <li class="list-group-item">Dirección: {{ object.direccion }}</li>
+        <li class="list-group-item">Postulacion Vigente?: {{ object.vigente }}</li>
+        <li class="list-group-item">Fecha Postulacion: {{ object.f_postulacion }}</li>
+        <li class="list-group-item">Postulacion Aprobada: {{ object.aprobado }}</li>
+    </ul>
+
+
+
+
+{% endblock content %}

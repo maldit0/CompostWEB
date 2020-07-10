@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+
+
+
+
+{% block content %}
+    <div class="form-signin mx-auto">
+        <div class="content-section text-center">
+            <img src="{% static 'images/logo' %}" class="img-fluid">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group px-3">
+                    <legend class="border-bottom mb-4" style="color:green">Sistema de Gestion</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-dark mt-3" type="submit">Ingresar</button>
+                </div>
+            </form>
+        </div>
+        <a class="align-right link-primary ml-3" href="#">Recuperar Contraseña</a>
+    </div>
+{% endblock content %}
